@@ -29,21 +29,25 @@ export default {
 				src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
 				id:"4"
 			}
-
-			]
-	},
+	]
+},
 	mutations: {
 		createAd(state, payload){
 			state.ads.push(payload)
-		}
-	},
+	}
+},
 	actions: {
 		createAd({commit},payload){
 			payload.id = Math.random()
-			commit('createAd', payload)
-		}
-	},
+				commit('createAd', payload)
+			}
+		},
 	getters: {
+        adById(state) {
+            return id => {
+            return state.ads.find(ad => ad.id == id)
+            }
+        },        
 		ads(state) {
 			return state.ads
 		},
@@ -54,12 +58,6 @@ export default {
 		},
 		myAds(state) {
 			return state.ads
-		},
-		adById(state) {
-			return id => {
-				return state.ads.find(ad => ad.id == id)
-			}
-		}
-
 	}
+}
 }

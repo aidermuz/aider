@@ -22,7 +22,8 @@ created(){
         projectId: "ad-pro-6890b",
         storageBucket: "ad-pro-6890b.appspot.com",
         messagingSenderId: "922087387846",
-        appId: "1:922087387846:web:61eb6659a7072408541dc7"
+        appId: "1:922087387846:web:61eb6659a7072408541dc7",
+        measurementId: "G-PJX8XT75BM"
 };
 // Initialize Firebase
     fb.initializeApp(firebaseConfig);
